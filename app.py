@@ -31,10 +31,10 @@ def index():
 					msgtext = message["message"]["text"]
 
 				if msgtext and sender:
-					print "Received " + msgtext + " from " + sender
+					print ("Received " + msgtext + " from " + sender)
 
 					returntext = processor.echo(msgtext)
-					print returntext
+					print (returntext)
 
 					interface.messageFB(returntext,sender)
 				elif sender:
@@ -50,7 +50,7 @@ def main():
 	app.run(host='0.0.0.0', port=config["server_port"])
 
 def printer(instr):
-	print instr
+	print (instr)
 
 if __name__ == '__main__':
 	main()
